@@ -23,7 +23,7 @@ class OnboardingScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "SafeApp2")
+        imageView.image = UIImage(named: "SafeApp")
         return imageView
     }()
     
@@ -33,7 +33,7 @@ class OnboardingScreen: UIView {
         button.backgroundColor = .black.withAlphaComponent(0.6)
         button.clipsToBounds = true
         button.layer.cornerRadius = 8
-        button.setTitle("Continuar", for: .normal)
+        button.setTitle("Start Now", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.titleLabel?.textColor = .black
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)

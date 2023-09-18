@@ -16,8 +16,12 @@
 		463AFC042AB87C8800468615 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 463AFC032AB87C8800468615 /* FirebaseCrashlytics */; };
 		463AFC092AB8846700468615 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC082AB8846700468615 /* OnboardingViewController.swift */; };
 		463AFC0B2AB8848400468615 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC0A2AB8848400468615 /* OnboardingScreen.swift */; };
-		463AFC122AB8911900468615 /* ApresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC112AB8911900468615 /* ApresentationViewController.swift */; };
-		463AFC142AB8912B00468615 /* ApresentationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC132AB8912B00468615 /* ApresentationScreen.swift */; };
+		463AFC122AB8911900468615 /* FirstInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC112AB8911900468615 /* FirstInfoViewController.swift */; };
+		463AFC142AB8912B00468615 /* FirstInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC132AB8912B00468615 /* FirstInfoScreen.swift */; };
+		463AFC192AB8F84B00468615 /* SecondInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC182AB8F84B00468615 /* SecondInfoViewController.swift */; };
+		463AFC1B2AB8F91300468615 /* SecondInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC1A2AB8F91300468615 /* SecondInfoScreen.swift */; };
+		463AFC202AB8FCC300468615 /* ThirdInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC1F2AB8FCC300468615 /* ThirdInfoViewController.swift */; };
+		463AFC222AB8FCF500468615 /* ThirdInfoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC212AB8FCF500468615 /* ThirdInfoScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +34,12 @@
 		463AFBFE2AB87C3B00468615 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		463AFC082AB8846700468615 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		463AFC0A2AB8848400468615 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
-		463AFC112AB8911900468615 /* ApresentationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApresentationViewController.swift; sourceTree = "<group>"; };
-		463AFC132AB8912B00468615 /* ApresentationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApresentationScreen.swift; sourceTree = "<group>"; };
+		463AFC112AB8911900468615 /* FirstInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInfoViewController.swift; sourceTree = "<group>"; };
+		463AFC132AB8912B00468615 /* FirstInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInfoScreen.swift; sourceTree = "<group>"; };
+		463AFC182AB8F84B00468615 /* SecondInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInfoViewController.swift; sourceTree = "<group>"; };
+		463AFC1A2AB8F91300468615 /* SecondInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondInfoScreen.swift; sourceTree = "<group>"; };
+		463AFC1F2AB8FCC300468615 /* ThirdInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdInfoViewController.swift; sourceTree = "<group>"; };
+		463AFC212AB8FCF500468615 /* ThirdInfoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdInfoScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				463AFC0C2AB890C500468615 /* Apresentantion */,
-				463AFC0D2AB890E900468615 /* Information */,
+				463AFC0D2AB890E900468615 /* FirstInformation */,
+				463AFC152AB8F7E900468615 /* SecondInformation */,
+				463AFC1C2AB8FC5D00468615 /* ThirdInformation */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -111,19 +121,19 @@
 			path = Apresentantion;
 			sourceTree = "<group>";
 		};
-		463AFC0D2AB890E900468615 /* Information */ = {
+		463AFC0D2AB890E900468615 /* FirstInformation */ = {
 			isa = PBXGroup;
 			children = (
 				463AFC0E2AB890F300468615 /* ViewController */,
 				463AFC0F2AB890FA00468615 /* Screen */,
 			);
-			path = Information;
+			path = FirstInformation;
 			sourceTree = "<group>";
 		};
 		463AFC0E2AB890F300468615 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				463AFC112AB8911900468615 /* ApresentationViewController.swift */,
+				463AFC112AB8911900468615 /* FirstInfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,7 +141,57 @@
 		463AFC0F2AB890FA00468615 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				463AFC132AB8912B00468615 /* ApresentationScreen.swift */,
+				463AFC132AB8912B00468615 /* FirstInfoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		463AFC152AB8F7E900468615 /* SecondInformation */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC162AB8F81F00468615 /* ViewController */,
+				463AFC172AB8F82600468615 /* Screen */,
+			);
+			path = SecondInformation;
+			sourceTree = "<group>";
+		};
+		463AFC162AB8F81F00468615 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC182AB8F84B00468615 /* SecondInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		463AFC172AB8F82600468615 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC1A2AB8F91300468615 /* SecondInfoScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		463AFC1C2AB8FC5D00468615 /* ThirdInformation */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC1D2AB8FCA000468615 /* ViewController */,
+				463AFC1E2AB8FCAF00468615 /* Screen */,
+			);
+			path = ThirdInformation;
+			sourceTree = "<group>";
+		};
+		463AFC1D2AB8FCA000468615 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC1F2AB8FCC300468615 /* ThirdInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		463AFC1E2AB8FCAF00468615 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				463AFC212AB8FCF500468615 /* ThirdInfoScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -214,12 +274,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				463AFC122AB8911900468615 /* ApresentationViewController.swift in Sources */,
+				463AFC202AB8FCC300468615 /* ThirdInfoViewController.swift in Sources */,
+				463AFC122AB8911900468615 /* FirstInfoViewController.swift in Sources */,
+				463AFC1B2AB8F91300468615 /* SecondInfoScreen.swift in Sources */,
 				463AFC0B2AB8848400468615 /* OnboardingScreen.swift in Sources */,
 				463AFBEB2AB87AE500468615 /* AppDelegate.swift in Sources */,
-				463AFC142AB8912B00468615 /* ApresentationScreen.swift in Sources */,
+				463AFC142AB8912B00468615 /* FirstInfoScreen.swift in Sources */,
 				463AFC092AB8846700468615 /* OnboardingViewController.swift in Sources */,
 				463AFBED2AB87AE500468615 /* SceneDelegate.swift in Sources */,
+				463AFC192AB8F84B00468615 /* SecondInfoViewController.swift in Sources */,
+				463AFC222AB8FCF500468615 /* ThirdInfoScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

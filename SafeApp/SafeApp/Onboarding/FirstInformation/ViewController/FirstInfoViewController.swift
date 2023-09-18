@@ -1,5 +1,5 @@
 //
-//  OnboardingViewController.swift
+//  ApresentationViewController.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class OnboardingViewController: UIViewController {
+class FirstInfoViewController: UIViewController {
     
-    var screen: OnboardingScreen?
+    var screen: FirstInfoScreen?
     
     override func loadView() {
-        screen = OnboardingScreen()
+        screen = FirstInfoScreen()
         view = screen
     }
 
@@ -20,12 +20,11 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
     }
-
 }
 
-extension OnboardingViewController: OnboardingScreenDelegate {
+extension FirstInfoViewController: FirstInfoDelegate {
     func tappedContinueButton() {
-        let vc: FirstInfoViewController = FirstInfoViewController()
+        let vc: SecondInfoViewController = SecondInfoViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }

@@ -1,5 +1,5 @@
 //
-//  ApresentationViewController.swift
+//  ThirdInformationViewController.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ApresentationViewController: UIViewController {
+class ThirdInfoViewController: UIViewController {
     
-    var screen: ApresentationScreen?
+    var screen: ThirdInfoScreen?
     
     override func loadView() {
-        screen = ApresentationScreen()
+        screen = ThirdInfoScreen()
         view = screen
     }
 
@@ -20,4 +20,5 @@ class ApresentationViewController: UIViewController {
         super.viewDidLoad()
 
     }
+
 }
