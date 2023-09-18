@@ -18,7 +18,17 @@ class ThirdInfoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        screen?.delegate(delegate: self)
     }
 
+}
+
+extension ThirdInfoViewController: ThirdInfoDelegate {
+    func tappedContinueButton() {
+        let vc: LoginVC = LoginVC()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    
+    
 }
