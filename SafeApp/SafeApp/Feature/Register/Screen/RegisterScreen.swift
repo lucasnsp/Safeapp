@@ -8,7 +8,7 @@
 import UIKit
 
 protocol RegisterScreenDelegate: AnyObject {
-    func tappedSignUpButton()
+    func tappedRegisterButton()
     func tappedLoginButton()
 }
 
@@ -18,6 +18,11 @@ class RegisterScreen: UIView {
     
     public func delegate(delegate: RegisterScreenDelegate?) {
         self.delegate = delegate
+    }
+    
+    public func configTextFieldsDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
     }
     
     lazy var rocketImageView: UIImageView = {
@@ -82,7 +87,7 @@ class RegisterScreen: UIView {
         return tf
     }()
     
-    lazy var signUpButton: UIButton = {
+    lazy var registerButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black.withAlphaComponent(0.6)
@@ -90,13 +95,13 @@ class RegisterScreen: UIView {
         button.layer.cornerRadius = 24
         button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 26)
-        button.addTarget(self, action: #selector(tappedSignUpButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(tappedRegisterButton), for: .touchUpInside)
         return button
     }()
     
     @objc
-    func tappedSignUpButton() {
-        delegate?.tappedSignUpButton()
+    func tappedRegisterButton() {
+        delegate?.tappedRegisterButton()
     }
     
     lazy var loginButton: UIButton = {
@@ -133,7 +138,7 @@ class RegisterScreen: UIView {
         addSubview(emailTextField)
         addSubview(passwordTextField)
         addSubview(loginButton)
-        addSubview(signUpButton)
+        addSubview(registerButton)
     }
     
     private func configConstraints() {
@@ -159,12 +164,12 @@ class RegisterScreen: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -45),
             passwordTextField.heightAnchor.constraint(equalToConstant: 55),
             
-            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 85),
-            signUpButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            signUpButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-            signUpButton.heightAnchor.constraint(equalToConstant: 60),
+            registerButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 85),
+            registerButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            registerButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            registerButton.heightAnchor.constraint(equalToConstant: 60),
             
-            loginButton.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 15),
+            loginButton.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 15),
             loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
     }

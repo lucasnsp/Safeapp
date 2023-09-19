@@ -10,6 +10,8 @@ import UIKit
 class RegisterVC: UIViewController {
     
     var screen: RegisterScreen?
+    var viewModel: RegisterViewModel? = RegisterViewModel()
+    var alert: AlertController?
     
     override func loadView() {
         screen = RegisterScreen()
@@ -19,11 +21,14 @@ class RegisterVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
+        screen?.configTextFieldsDelegate(delegate: self)
+        viewModel?.delegate(delegate: self)
     }
 }
 
 extension RegisterVC: RegisterScreenDelegate {
-    func tappedSignUpButton() {
+    func tappedRegisterButton() {
+        viewModel?.registerUser(email: screen?.emailTextField.text ?? "", password: screen?.emailTextField.text ?? "")
         print(#function)
     }
     
@@ -31,6 +36,27 @@ extension RegisterVC: RegisterScreenDelegate {
         let vc: LoginVC = LoginVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
+    }
+}
+
+extension RegisterVC: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        viewModel?.textFieldLayout(textField)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension RegisterVC: RegisterViewModelDelegate {
+    func registerSucess() {
+        print("Cadastro concluido")
+    }
+    
+    func errorRegister(errorMessage: String) {
+        alert?.getAlert(title: "Register Failed", message: errorMessage)
     }
     
     

@@ -20,6 +20,10 @@ class LoginScreen: UIView {
         self.delegate = delegate
     }
 
+    public func configTextFieldsDelegate(delegate: UITextFieldDelegate) {
+        emailTextField.delegate = delegate
+        passwordTextField.delegate = delegate
+    }
     
     lazy var rocketImageView: UIImageView = {
         let imageView = UIImageView()

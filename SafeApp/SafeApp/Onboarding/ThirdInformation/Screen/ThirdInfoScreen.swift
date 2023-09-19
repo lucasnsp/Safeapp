@@ -43,7 +43,7 @@ class ThirdInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "We'll guide you on the journey to achieve your financial goals, step by step."
+        label.text = "We'll guide you on the journey to achieve your goals, step by step, creating good habits, learning how to save money and reaching your full potential."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)

@@ -33,7 +33,7 @@ class FirstInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "Welcome to SafeApp"
+        label.text = "Welcome to UpYou"
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
         return label
@@ -43,7 +43,7 @@ class FirstInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "Here, you manage your finances smartly. Let's start building a more solid financial future together."
+        label.text = "Here, you manage your finances smartly.\n Let's start building a more solid financial future together."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)

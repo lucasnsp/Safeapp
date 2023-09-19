@@ -25,7 +25,7 @@ class OnboardingScreen: UIView {
         imageView.contentMode = .scaleToFill
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 24
-        imageView.image = UIImage(named: "SafeApp")
+        imageView.image = UIImage(named: "DEA")
         return imageView
     }()
     

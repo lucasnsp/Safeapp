@@ -43,7 +43,7 @@ class SecondInfoScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black
-        label.text = "At SafeApp, it's not just about tracking expenses, but also about creating and building the right mindset to succed in life."
+        label.text = "At UpYou, it's not just about tracking expenses, but also about creating and building the right mindset to succed in life."
         label.numberOfLines = 0
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.5, weight: .semibold)
