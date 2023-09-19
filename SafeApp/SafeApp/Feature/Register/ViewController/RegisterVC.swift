@@ -1,5 +1,5 @@
 //
-//  LoginVC.swift
+//  RegisterVC.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,33 +7,30 @@
 
 import UIKit
 
-class LoginVC: UIViewController {
+class RegisterVC: UIViewController {
     
-    var screen: LoginScreen?
+    var screen: RegisterScreen?
     
     override func loadView() {
-        screen = LoginScreen()
+        screen = RegisterScreen()
         view = screen
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
     }
-
 }
 
-extension LoginVC: LoginScreenDelegate {
-    func tappedLoginButton() {
+extension RegisterVC: RegisterScreenDelegate {
+    func tappedSignUpButton() {
         print(#function)
     }
     
-    func tappedSignUpButton() {
-        print(#function)
-        let vc = RegisterVC()
+    func tappedLoginButton() {
+        let vc: LoginVC = LoginVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
-        
     }
     
     

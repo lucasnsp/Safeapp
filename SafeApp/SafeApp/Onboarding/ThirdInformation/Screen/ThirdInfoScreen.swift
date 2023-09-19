@@ -23,7 +23,7 @@ class ThirdInfoScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16
+        imageView.layer.cornerRadius = 20
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "mapa_do_tesouro")
         return imageView
@@ -55,7 +55,7 @@ class ThirdInfoScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black.withAlphaComponent(0.6)
         button.clipsToBounds = true
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 24
         button.setTitle("Are you ready?", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.titleLabel?.textColor = .black

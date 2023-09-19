@@ -23,6 +23,8 @@ class OnboardingScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleToFill
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 24
         imageView.image = UIImage(named: "SafeApp")
         return imageView
     }()
@@ -32,7 +34,7 @@ class OnboardingScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black.withAlphaComponent(0.6)
         button.clipsToBounds = true
-        button.layer.cornerRadius = 8
+        button.layer.cornerRadius = 24
         button.setTitle("Start Now", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.titleLabel?.textColor = .black

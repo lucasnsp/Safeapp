@@ -1,5 +1,5 @@
 //
-//  LoginScreen.swift
+//  RegisterScreen.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,19 +7,18 @@
 
 import UIKit
 
-protocol LoginScreenDelegate: AnyObject {
-    func tappedLoginButton()
+protocol RegisterScreenDelegate: AnyObject {
     func tappedSignUpButton()
+    func tappedLoginButton()
 }
 
-class LoginScreen: UIView {
+class RegisterScreen: UIView {
     
-    private weak var delegate: LoginScreenDelegate?
+    private weak var delegate: RegisterScreenDelegate?
     
-    public func delegate(delegate: LoginScreenDelegate?) {
+    public func delegate(delegate: RegisterScreenDelegate?) {
         self.delegate = delegate
     }
-
     
     lazy var rocketImageView: UIImageView = {
         let imageView = UIImageView()
@@ -27,14 +26,14 @@ class LoginScreen: UIView {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 16
         imageView.contentMode = .scaleAspectFill
-        imageView.image = UIImage(named: "homem_foguete")
+        imageView.image = UIImage(named: "homem_com_dinheiro")
         return imageView
     }()
     
     lazy var loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Login Now"
+        label.text = "Sign Up Now"
         label.textColor = .black
         label.font = UIFont.boldSystemFont(ofSize: 28)
         label.textAlignment = .center
@@ -45,7 +44,7 @@ class LoginScreen: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textColor = .black.withAlphaComponent(0.7)
-        label.text = "Please login to continue using our app"
+        label.text = "Please create a free account to use the app. "
         label.font = UIFont.systemFont(ofSize: 12)
         label.textAlignment = .center
         return label
@@ -83,14 +82,29 @@ class LoginScreen: UIView {
         return tf
     }()
     
-    lazy var loginButton: UIButton = {
+    lazy var signUpButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black.withAlphaComponent(0.6)
         button.clipsToBounds = true
         button.layer.cornerRadius = 24
-        button.setTitle("Login", for: .normal)
+        button.setTitle("Sign Up", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 26)
+        button.addTarget(self, action: #selector(tappedSignUpButton), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc
+    func tappedSignUpButton() {
+        delegate?.tappedSignUpButton()
+    }
+    
+    lazy var loginButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Already have an account? Login", for: .normal)
+        button.setTitleColor(.darkGray, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.addTarget(self, action: #selector(tappedLoginButton), for: .touchUpInside)
         return button
     }()
@@ -100,21 +114,6 @@ class LoginScreen: UIView {
         delegate?.tappedLoginButton()
     }
     
-    lazy var signUpButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("Don't have an account? Sign Up", for: .normal)
-        button.setTitleColor(.darkGray, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
-        button.addTarget(self, action: #selector(tappedSignUpButton), for: .touchUpInside)
-        return button
-    }()
-    
-    @objc
-    func tappedSignUpButton() {
-        delegate?.tappedSignUpButton()
-    }
-
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -160,14 +159,15 @@ class LoginScreen: UIView {
             passwordTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -45),
             passwordTextField.heightAnchor.constraint(equalToConstant: 55),
             
-            loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 85),
-            loginButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            loginButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-            loginButton.heightAnchor.constraint(equalToConstant: 60),
+            signUpButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 85),
+            signUpButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            signUpButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            signUpButton.heightAnchor.constraint(equalToConstant: 60),
             
-            signUpButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 15),
-            signUpButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            loginButton.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 15),
+            loginButton.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
     }
-
+    
+    
 }
