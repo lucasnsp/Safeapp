@@ -23,7 +23,7 @@ class SecondInfoScreen: UIView {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16
+        imageView.layer.cornerRadius = 24
         imageView.contentMode = .scaleAspectFill
         imageView.image = UIImage(named: "cofre_porquinho")
         return imageView
@@ -55,8 +55,8 @@ class SecondInfoScreen: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .black.withAlphaComponent(0.6)
         button.clipsToBounds = true
-        button.layer.cornerRadius = 8
-        button.setTitle("Continue", for: .normal)
+        button.layer.cornerRadius = 24
+        button.setTitle("There's more", for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 20)
         button.titleLabel?.textColor = .black
         button.addTarget(self, action: #selector(tappedContinueButton), for: .touchUpInside)

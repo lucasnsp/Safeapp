@@ -1,5 +1,5 @@
 //
-//  ThirdInformationViewController.swift
+//  RegisterVC.swift
 //  SafeApp
 //
 //  Created by Lucas Neves dos santos pompeu on 18/09/23.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class ThirdInfoViewController: UIViewController {
+class RegisterVC: UIViewController {
     
-    var screen: ThirdInfoScreen?
+    var screen: RegisterScreen?
     
     override func loadView() {
-        screen = ThirdInfoScreen()
+        screen = RegisterScreen()
         view = screen
     }
 
@@ -20,11 +20,14 @@ class ThirdInfoViewController: UIViewController {
         super.viewDidLoad()
         screen?.delegate(delegate: self)
     }
-
 }
 
-extension ThirdInfoViewController: ThirdInfoDelegate {
-    func tappedContinueButton() {
+extension RegisterVC: RegisterScreenDelegate {
+    func tappedSignUpButton() {
+        print(#function)
+    }
+    
+    func tappedLoginButton() {
         let vc: LoginVC = LoginVC()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
