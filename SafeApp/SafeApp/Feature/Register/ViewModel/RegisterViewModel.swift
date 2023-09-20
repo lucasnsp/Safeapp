@@ -15,7 +15,7 @@ protocol RegisterViewModelDelegate: AnyObject {
 
 class RegisterViewModel {
     
-    private var registerScreenData: RegisterScreen? = RegisterScreen()
+    private var registerScreenData: RegisterScreen?
     private var auth = Auth.auth()
     private weak var delegate: RegisterViewModelDelegate?
     
@@ -24,7 +24,7 @@ class RegisterViewModel {
     }
     
     public func registerUser(email: String, password: String) {
-        auth.createUser(withEmail: email, password: password, completion: { user, error in
+        auth.createUser(withEmail: email, password: password, completion: { authResult, error in
             if error != nil {
                 self.delegate?.errorRegister(errorMessage: error?.localizedDescription ?? "")
             } else {
@@ -60,6 +60,5 @@ class RegisterViewModel {
                 break
             }
         }
-        
     }
 }

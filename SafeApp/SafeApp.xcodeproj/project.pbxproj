@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		461BEF072ABA436F00C07847 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF062ABA436F00C07847 /* String+Extension.swift */; };
 		461BEF0A2ABA597100C07847 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF092ABA597100C07847 /* AlertController.swift */; };
+		461BEF0C2ABA633000C07847 /* VCTeste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461BEF0B2ABA633000C07847 /* VCTeste.swift */; };
+		461BEF102ABA70FF00C07847 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 461BEF0F2ABA70FF00C07847 /* GoogleService-Info.plist */; };
 		463AFBEB2AB87AE500468615 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFBEA2AB87AE500468615 /* AppDelegate.swift */; };
 		463AFBED2AB87AE500468615 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFBEC2AB87AE500468615 /* SceneDelegate.swift */; };
 		463AFBF42AB87AE700468615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 463AFBF32AB87AE700468615 /* Assets.xcassets */; };
 		463AFBF72AB87AE700468615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 463AFBF52AB87AE700468615 /* LaunchScreen.storyboard */; };
-		463AFBFF2AB87C3B00468615 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 463AFBFE2AB87C3B00468615 /* GoogleService-Info.plist */; };
 		463AFC022AB87C8800468615 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 463AFC012AB87C8800468615 /* FirebaseAuth */; };
 		463AFC042AB87C8800468615 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 463AFC032AB87C8800468615 /* FirebaseCrashlytics */; };
 		463AFC092AB8846700468615 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463AFC082AB8846700468615 /* OnboardingViewController.swift */; };
@@ -35,13 +36,14 @@
 /* Begin PBXFileReference section */
 		461BEF062ABA436F00C07847 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		461BEF092ABA597100C07847 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		461BEF0B2ABA633000C07847 /* VCTeste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCTeste.swift; sourceTree = "<group>"; };
+		461BEF0F2ABA70FF00C07847 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		463AFBE72AB87AE500468615 /* SafeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		463AFBEA2AB87AE500468615 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		463AFBEC2AB87AE500468615 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		463AFBF32AB87AE700468615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		463AFBF62AB87AE700468615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		463AFBF82AB87AE700468615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		463AFBFE2AB87C3B00468615 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		463AFC082AB8846700468615 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		463AFC0A2AB8848400468615 /* OnboardingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
 		463AFC112AB8911900468615 /* FirstInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstInfoViewController.swift; sourceTree = "<group>"; };
@@ -120,10 +122,11 @@
 				461BEF052ABA434B00C07847 /* Utils */,
 				463AFBEA2AB87AE500468615 /* AppDelegate.swift */,
 				463AFBEC2AB87AE500468615 /* SceneDelegate.swift */,
+				461BEF0F2ABA70FF00C07847 /* GoogleService-Info.plist */,
 				463AFBF32AB87AE700468615 /* Assets.xcassets */,
 				463AFBF52AB87AE700468615 /* LaunchScreen.storyboard */,
 				463AFBF82AB87AE700468615 /* Info.plist */,
-				463AFBFE2AB87C3B00468615 /* GoogleService-Info.plist */,
+				461BEF0B2ABA633000C07847 /* VCTeste.swift */,
 			);
 			path = SafeApp;
 			sourceTree = "<group>";
@@ -382,8 +385,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				463AFBF72AB87AE700468615 /* LaunchScreen.storyboard in Resources */,
-				463AFBFF2AB87C3B00468615 /* GoogleService-Info.plist in Resources */,
 				463AFBF42AB87AE700468615 /* Assets.xcassets in Resources */,
+				461BEF102ABA70FF00C07847 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +406,7 @@
 				463AFC0B2AB8848400468615 /* OnboardingScreen.swift in Sources */,
 				463AFC312AB904C800468615 /* LoginScreen.swift in Sources */,
 				461BEF072ABA436F00C07847 /* String+Extension.swift in Sources */,
+				461BEF0C2ABA633000C07847 /* VCTeste.swift in Sources */,
 				463AFBEB2AB87AE500468615 /* AppDelegate.swift in Sources */,
 				461BEF0A2ABA597100C07847 /* AlertController.swift in Sources */,
 				463AFC142AB8912B00468615 /* FirstInfoScreen.swift in Sources */,
@@ -479,7 +483,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -533,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

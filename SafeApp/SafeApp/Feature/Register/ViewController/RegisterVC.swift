@@ -11,7 +11,6 @@ class RegisterVC: UIViewController {
     
     var screen: RegisterScreen?
     var viewModel: RegisterViewModel? = RegisterViewModel()
-    var alert: AlertController?
     
     override func loadView() {
         screen = RegisterScreen()
@@ -56,7 +55,7 @@ extension RegisterVC: RegisterViewModelDelegate {
     }
     
     func errorRegister(errorMessage: String) {
-        alert?.getAlert(title: "Register Failed", message: errorMessage)
+        AlertController(controller: self).getAlert(title: "Register failed", message: errorMessage)
     }
     
     
